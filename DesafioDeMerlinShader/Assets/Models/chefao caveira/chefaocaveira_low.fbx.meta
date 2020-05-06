@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TT_checker_1024x1024_UV_GRID
-    second: {fileID: 2100000, guid: db5edfa692e5e2d4392f34136031385e, type: 2}
+    second: {fileID: 2100000, guid: 9638dd4987373c948834d090d3a37aad, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
