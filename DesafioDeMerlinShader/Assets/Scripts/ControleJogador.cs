@@ -3,7 +3,8 @@
 public class ControleJogador : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed = 5.0f;
+    public float speed;
+    float speedFixa;
     Rigidbody fisica;
     RaycastHit hit;
     Vector3 movimento;
@@ -12,7 +13,8 @@ public class ControleJogador : MonoBehaviour
 
 
     private Animator animator;
-
+    public float duracaoSnare;
+    float tempo;
 
     //ector3 posicaoDoMundo = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     void Start()
@@ -20,7 +22,7 @@ public class ControleJogador : MonoBehaviour
         animator = GetComponent<Animator>();
         fisica = GetComponent<Rigidbody>();
         Cursor.visible = false;
-
+        speedFixa = speed;
     }
 
     private void Update()
@@ -43,6 +45,21 @@ public class ControleJogador : MonoBehaviour
         }
 
         PlayAnim(axisX, axixZ);
+
+        if (speed == 0)
+        {
+            tempo += tempo * Time.deltaTime;
+            if (tempo >= duracaoSnare)
+            {
+                speed = speedFixa;
+            }
+
+        }
+
+        if (speed != 0)
+        {
+            tempo = 1;
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -56,7 +73,13 @@ public class ControleJogador : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "NaoSei")
+        {
+            speed = 0;
+        }
+    }
 
     void PlayAnim(float x, float y)
     {
