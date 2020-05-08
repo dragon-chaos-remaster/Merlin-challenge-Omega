@@ -27,6 +27,8 @@ public class ControleJogador : MonoBehaviour
 
     private void Update()
     {
+
+
         if (animator == null)
             return;
         float axisX = Input.GetAxisRaw("Vertical");
@@ -48,6 +50,7 @@ public class ControleJogador : MonoBehaviour
 
         if (speed == 0)
         {
+            Debug.Log("VELOCIDADE IGUAL A 00");
             tempo += tempo * Time.deltaTime;
             if (tempo >= duracaoSnare)
             {
