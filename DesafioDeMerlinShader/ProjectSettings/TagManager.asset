@@ -30,6 +30,7 @@ TagManager:
   - Resume
   - Options
   - Quit
+  - Controls
   layers:
   - Default
   - TransparentFX

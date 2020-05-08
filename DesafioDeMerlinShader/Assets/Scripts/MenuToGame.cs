@@ -8,7 +8,7 @@ public class MenuToGame : MonoBehaviour
 {
     [SerializeField] GameObject loadingSet;
     [SerializeField] RectTransform slider;
-
+    //[SerializeField] GameObject windParticle;
     [SerializeField] GameObject thisGuy;
     [SerializeField] ParticleSystem manyParticles;
     // Start is called before the first frame update
@@ -18,14 +18,18 @@ public class MenuToGame : MonoBehaviour
         loadingSet.SetActive(true);
         StartCoroutine(Transicao(index));
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            Tran_SITION(1);
+    }
     IEnumerator Transicao(int buildNumber)
     {
         var em = manyParticles.emission;
-        em.rateOverTime = 90;
+        em.rateOverTime = 0;
         //slider.offsetMax += new Vector2(-10f * Time.deltaTime, slider.offsetMax.y);
         //print("Ema");
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         AsyncOperation operacao = SceneManager.LoadSceneAsync(buildNumber);
         
         while (!operacao.isDone)
