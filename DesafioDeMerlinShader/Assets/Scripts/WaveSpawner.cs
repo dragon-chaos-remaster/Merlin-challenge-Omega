@@ -37,7 +37,7 @@ public class WaveSpawner : MonoBehaviour
         //public bool apenasMelees;
         //public bool apenasPedras;
         //public bool[] estaNaIlha;
-        public bool[] apenas = new bool[3];
+        public bool[] apenas = new bool[5];
         public string nome;
         public Transform[] inimigo;
         public int quantidade;
@@ -78,7 +78,10 @@ public class WaveSpawner : MonoBehaviour
             Debug.LogError("ERRO: Não foi encontrado nenhum Ponto de Spawn dos Inimigos na Cena. FAVOR COLOCAR: " + spawnPoints.Length + " PARA A CENA");
         }
        
-
+        for(int i = 0; i < pooledObjects[1].listaDeObjetos.Count; i++)
+        {
+            pooledObjects[1].listaDeObjetos[i].AddComponent<CogumeloBoom>();
+        }
         //transforms.Add(whenCameraChanges.nIlha, spawnPoints);
         
         contadorDaWave = tempoEntreWaves;
@@ -145,7 +148,7 @@ public class WaveSpawner : MonoBehaviour
         if (procurarContador <= 0f)
         {
             procurarContador = 1f;
-            if ((GameObject.FindGameObjectWithTag("inimigoFraco") == null && GameObject.FindGameObjectWithTag("inimigoTerra") == null) && !bosses[0].activeInHierarchy && activateBoss[1] && (!bosses[1].GetComponentInChildren<SphereCollider>().enabled || !bosses[1].activeInHierarchy))
+            if ((GameObject.FindGameObjectWithTag("inimigoFraco") == null && GameObject.FindGameObjectWithTag("inimigoTerra") == null && GameObject.FindGameObjectWithTag("inimigoMadeira") == null) && !bosses[0].activeInHierarchy && activateBoss[1] && (!bosses[1].GetComponentInChildren<SphereCollider>().enabled || !bosses[1].activeInHierarchy))
             {
                 //FREEZE FRAME NO ULTIMO INIMIGO
                 tempo.FreezeFrame();
@@ -222,6 +225,11 @@ public class WaveSpawner : MonoBehaviour
         else if (waves[proximaWave].apenas[2])
         {
             GameObject aux = pooledObjects[2].GetPooledObject();
+            SetEnemyToSpawn(aux);
+        }
+        else if (waves[proximaWave].apenas[3])
+        {
+            GameObject aux = pooledObjects[3].GetPooledObject();
             SetEnemyToSpawn(aux);
         }
         else

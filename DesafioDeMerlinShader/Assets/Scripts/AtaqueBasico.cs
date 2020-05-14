@@ -55,6 +55,15 @@ public class AtaqueBasico : MonoBehaviour
                 Instantiate(hitBasico, ondeNasce.position, ondeNasce.rotation);
                 Destroy(gameObject);
                 break;
+            case "inimigoMadeira":
+                Instantiate(hitBasico, ondeNasce.position, ondeNasce.rotation);
+                Destroy(gameObject);
+                break;
+            case "inimigoPedraMinion":
+                //inimigoPedra.enemySpotted = true;
+                Instantiate(hitBasico, ondeNasce.position, ondeNasce.rotation);
+                Destroy(gameObject);
+                break;
         }
 
     }

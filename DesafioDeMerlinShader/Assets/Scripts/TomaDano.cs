@@ -12,7 +12,7 @@ public class TomaDano : MonoBehaviour
 
     private void Start()
     {
-        if (gameObject.tag != "inimigoFraco" && gameObject.tag != "inimigoPedra")
+        if (gameObject.tag != "inimigoFraco" && gameObject.tag != "inimigoPedra" && gameObject.tag != "inimigoMadeira")
         {
             barraVida = GetComponentInChildren<BarraDeVida>();
             barraVida.SetVidaMaxima(vida);
@@ -29,7 +29,7 @@ public class TomaDano : MonoBehaviour
         //iTween.ShakeScale(barraVida.gameObject, iTween.Hash("z", 0.1f, "y", 0.05f, "amount", barraVida.gameObject.transform.localScale, "time", 0.1f));
         iTween.PunchPosition(gameObject, iTween.Hash("x",0.3f, "z",0.1f));
         //iTween.PunchScale(gameObject, iTween.Hash("y", 0.5f, "amount",Vector3.up));
-        if (gameObject.tag != "inimigoFraco" && gameObject.tag != "inimigoPedra")
+        if (gameObject.tag != "inimigoFraco" && gameObject.tag != "inimigoPedra" && gameObject.tag != "inimigoMadeira")
             barraVida.SetVida(vida);
         if (vida <= 0)
         {

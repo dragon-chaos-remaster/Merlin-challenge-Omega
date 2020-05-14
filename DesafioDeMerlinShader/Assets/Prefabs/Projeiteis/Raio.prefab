@@ -19548,6 +19548,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitRaio: {fileID: 1351045683517926, guid: 5562510c140fbb948ab4ebd4701692a2, type: 3}
   ondeNasce: {fileID: 4983590539943298}
+  layerDeInimigos:
+    serializedVersion: 2
+    m_Bits: 0
   raio: {fileID: 4983590539943298}
   velocidadeProjetil: 3000
   limiteDeRicochete: 4

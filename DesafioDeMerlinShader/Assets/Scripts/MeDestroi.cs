@@ -7,11 +7,7 @@ public class MeDestroi : MonoBehaviour
     float tempoViva = 0;
     float tempoAtual = 1;
     public float tempoDestruicao;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -19,8 +15,9 @@ public class MeDestroi : MonoBehaviour
         tempoViva += tempoAtual * Time.deltaTime;
         if (tempoViva >= tempoDestruicao)
         {
-            Destroy(gameObject);
-
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            tempoViva = 0;
         }
     }
 }

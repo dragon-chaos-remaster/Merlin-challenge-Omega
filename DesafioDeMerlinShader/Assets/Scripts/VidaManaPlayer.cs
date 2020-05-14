@@ -10,7 +10,7 @@ public class VidaManaPlayer : MonoBehaviour
 
     public Image barraVida;
     public Text quantidadeVida;
-     
+
 
 
     // Update is called once per frame
@@ -68,13 +68,20 @@ public class VidaManaPlayer : MonoBehaviour
         {
             case "inimigoFraco":
                 vida -= 10;
-                break; 
+                break;
+            case "inimigoMadeira":
+                vida -= 10;
+                break;
             case "inimigoTerra":
                 vida -= 15;
                 break; 
             case "inimigoPedra":
                 vida -= 5 * Mathf.Clamp(collision.gameObject.transform.localScale.magnitude,1f,4f);
-                break; 
+                break;
+            case "NaoSei":
+                vida -= 5;
+                
+                break;
 
         }
 

@@ -109,7 +109,7 @@ public class Caveira : MonoBehaviour
 
                 dano.gameObject.GetComponent<TomaDano>().TomarDanos(dRaio);
                 break;
-            case "NaoSei":
+            case "RaizDoPlayer":
                 snare.gameObject.GetComponent<Snared>().Snare();
                 dano.gameObject.GetComponent<TomaDano>().TomarDanos(dNaoSei);
                 break;

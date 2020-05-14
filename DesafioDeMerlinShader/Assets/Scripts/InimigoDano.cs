@@ -45,9 +45,20 @@ public class InimigoDano : MonoBehaviour
                 dano.gameObject.GetComponent<TomaDano>().TomarDanos(dRaio);
                 break;
             case "NaoSei":
+                if (snare.gameObject.CompareTag("inimigoMadeira"))
+                {
+                    dano.gameObject.GetComponent<TomaDano>().TomarDanos(dNaoSei);
+                }
+                else
+                {
+                    snare.gameObject.GetComponent<Snared>().Snare();
+                    dano.gameObject.GetComponent<TomaDano>().TomarDanos(dNaoSei);
+                }
+                
+                break;
+            case "RaizDoPlayer":
                 snare.gameObject.GetComponent<Snared>().Snare();
                 dano.gameObject.GetComponent<TomaDano>().TomarDanos(dNaoSei);
-
                 break;
             case "ataqueBasico":
 

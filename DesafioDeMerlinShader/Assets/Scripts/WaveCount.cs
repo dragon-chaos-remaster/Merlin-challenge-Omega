@@ -41,7 +41,7 @@ public class WaveCount : MonoBehaviour
         if(timer >= contagem)
         {
             timer = 0;
-            waveCounter.text = numeroDaWave.ToString();
+            waveCounter.text = "WAVE " + numeroDaWave.ToString();
             //numeroDaWave++;
         }
        /* if(numeroDaWave >= numeroDeWaves)
