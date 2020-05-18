@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 644805608378037882}
   - component: {fileID: 644805608378037885}
   - component: {fileID: 644805608378037884}
-  - component: {fileID: 644805608378037883}
   m_Layer: 15
   m_Name: inimigoCogumelo
   m_TagString: inimigoFraco
@@ -194,18 +193,6 @@ MonoBehaviour:
   controleDrop: 60
   item: {fileID: 5516428012973944900, guid: 27d526bba8a239a45a397a672bb83539, type: 3}
   ondeNasce: {fileID: 0}
---- !u!114 &644805608378037883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644805608378037877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 911c244fca37e3047ad8d334e7dfb114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &644805606978569069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,7 +279,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 81facd517da39ae40842b8142888130b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: -496718640575737540, guid: 0cbab23509e7a9f4a93a3b41d483b2ef,
         type: 3}
       propertyPath: m_Layer
@@ -302,7 +289,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 81facd517da39ae40842b8142888130b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: -160260628284497145, guid: 0cbab23509e7a9f4a93a3b41d483b2ef,
         type: 3}
       propertyPath: m_Layer
@@ -312,12 +299,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 81facd517da39ae40842b8142888130b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2114747137706482949, guid: 0cbab23509e7a9f4a93a3b41d483b2ef,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 81facd517da39ae40842b8142888130b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4365000494541058198, guid: 0cbab23509e7a9f4a93a3b41d483b2ef,
         type: 3}
       propertyPath: m_Layer
@@ -327,7 +314,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 81facd517da39ae40842b8142888130b, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cbab23509e7a9f4a93a3b41d483b2ef, type: 3}
 --- !u!4 &5586851153221183607 stripped

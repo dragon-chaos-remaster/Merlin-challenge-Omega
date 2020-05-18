@@ -55,8 +55,8 @@ public class RockEnemy : MonoBehaviour
         agent.acceleration = aceleration;
         agent.stoppingDistance = distanciaDeNojo;
 
-        print(transform.localScale.sqrMagnitude);
-        print("Speed of " + agent.speed + " from " + this.gameObject.name);
+        //print(transform.localScale.sqrMagnitude);
+        //print("Speed of " + agent.speed + " from " + this.gameObject.name);
 
         dano = GetComponent<TomaDano>();
         snare = GetComponent<Snared>();

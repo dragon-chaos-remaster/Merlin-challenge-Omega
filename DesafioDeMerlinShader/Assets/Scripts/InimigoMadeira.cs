@@ -24,12 +24,18 @@ public class InimigoMadeira : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(this.gameObject == null)
+        {
+            return;
+        }
         OlhandoProPlayer();
         float distance = Vector3.Distance(transform.position, target.position);
+        disShot = distance;
         if (distance <= disShot)
         {
             if (!isShooting)
             {
+                print("Atirei");
                 InvokeRepeating("Shoot", Random.Range(minAtirar, maxAtirar), Random.Range(minAtirar, maxAtirar));
                 isShooting = true;
             }

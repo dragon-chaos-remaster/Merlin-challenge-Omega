@@ -19,10 +19,18 @@ public class MenuToGame : MonoBehaviour
         StartCoroutine(Transicao(index));
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Tran_SITION(1);
+        }
+    }
     IEnumerator Transicao(int buildNumber)
     {
-        var em = manyParticles.emission;
-        em.rateOverTime = 90;
+        //var em = manyParticles.emission;
+        //em.rateOverTime = 90;
+        manyParticles.gameObject.SetActive(false);
         //slider.offsetMax += new Vector2(-10f * Time.deltaTime, slider.offsetMax.y);
         //print("Ema");
         yield return new WaitForSeconds(5f);

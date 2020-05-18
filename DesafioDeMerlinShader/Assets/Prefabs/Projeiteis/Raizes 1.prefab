@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1763516137760227004}
   - component: {fileID: 1763516137760227007}
   - component: {fileID: 1763516137760227005}
-  - component: {fileID: -2936396521166173305}
   m_Layer: 0
   m_Name: Raizes 1
   m_TagString: NaoSei
@@ -128,9 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raizes: {fileID: 63403252030117313, guid: c0910da3193842c4c815e07bec5fb9de, type: 3}
-  velocidadeProjetil: 3000
-  playerControl: {fileID: 0}
-  desnareHim: {fileID: 0}
+  velocidadeProjetil: 1000
 --- !u!114 &1763516137760227005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,20 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempoDestruicao: 3
---- !u!114 &-2936396521166173305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763516137760227002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 075bb47142ffaaf4e9647e83152a1a18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerControl: {fileID: 0}
-  tempoAtivo: 1.5
 --- !u!1 &4274676020210065170
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raizes: {fileID: 63403252030117313, guid: c0910da3193842c4c815e07bec5fb9de, type: 3}
   velocidadeProjetil: 3000
-  playerControl: {fileID: 0}
-  desnareHim: {fileID: 0}
 --- !u!114 &1312404790129305393
 MonoBehaviour:
   m_ObjectHideFlags: 0
