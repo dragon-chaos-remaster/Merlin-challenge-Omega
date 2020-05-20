@@ -144,7 +144,7 @@ public class RockEnemy : MonoBehaviour
                 enemySpotted = true;
                 dano.gameObject.GetComponent<TomaDano>().TomarDanos(12);
                 break;
-            case "NaoSei":
+            case "RaizDoPlayer":
                 enemySpotted = true;
                 snare.gameObject.GetComponent<Snared>().Snare();
                 dano.gameObject.GetComponent<TomaDano>().TomarDanos(7);

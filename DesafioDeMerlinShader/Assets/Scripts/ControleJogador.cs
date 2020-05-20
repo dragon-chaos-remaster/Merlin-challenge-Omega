@@ -51,6 +51,7 @@ public class ControleJogador : MonoBehaviour
             tempo += tempo * Time.deltaTime;
             if (tempo >= duracaoSnare)
             {
+                FindObjectOfType<AudioManager>().Play("revertSnare");
                 speed = speedFixa;
             }
 
@@ -77,6 +78,7 @@ public class ControleJogador : MonoBehaviour
     {
         if (other.tag == "NaoSei")
         {
+            FindObjectOfType<AudioManager>().Play("snare");
             speed = 0;
         }
     }

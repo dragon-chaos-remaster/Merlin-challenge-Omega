@@ -34,7 +34,7 @@ public class CaveiraMinion : MonoBehaviour
         }
         if (BossCaveira.contagemCaveira >= 4 || tempoAtual >= 3 || (!nossoMestre.activeInHierarchy)) /*!GameObject.FindWithTag("BossCaveira").gameObject.activeInHierarchy)*/
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         
         OlhandoProPlayer();

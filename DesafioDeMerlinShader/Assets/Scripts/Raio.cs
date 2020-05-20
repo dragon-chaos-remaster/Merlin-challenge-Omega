@@ -55,7 +55,7 @@ public class Raio : MonoBehaviour
                 {
                     inimigoMaisPerto = inimigos[i].transform;
                    
-                    print(inimigos[i].transform);
+                    //print(inimigos[i].transform);
                 }
             }
 

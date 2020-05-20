@@ -13,18 +13,21 @@ public class InimigoMadeira : MonoBehaviour
 
     public float minAtirar;
     public float maxAtirar;
-
+    TomaDano vidaReplenish;
+    [SerializeField] int vidaRestore;
     [SerializeField] Pooling pooling;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindWithTag("player").transform;
+        vidaReplenish = GetComponent<TomaDano>();
+        vidaRestore = vidaReplenish.vida;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(this.gameObject == null)
+        if(!this.gameObject.activeInHierarchy || gameObject == null)
         {
             return;
         }
@@ -35,7 +38,7 @@ public class InimigoMadeira : MonoBehaviour
         {
             if (!isShooting)
             {
-                print("Atirei");
+                //print("Atirei");
                 InvokeRepeating("Shoot", Random.Range(minAtirar, maxAtirar), Random.Range(minAtirar, maxAtirar));
                 isShooting = true;
             }
@@ -48,6 +51,11 @@ public class InimigoMadeira : MonoBehaviour
         }
 
 
+    }
+    void OnDisable()
+    {
+        vidaReplenish.vida = vidaRestore;
+        CancelInvoke();
     }
     void Shoot()
     {
