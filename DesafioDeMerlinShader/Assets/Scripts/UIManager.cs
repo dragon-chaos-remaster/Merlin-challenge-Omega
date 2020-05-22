@@ -28,15 +28,19 @@ public class UIManager : MonoBehaviour
             switch (botao.tag)
             {
                 case "Resume":
+                    FindObjectOfType<AudioManager>().Play("do");
                     Despausar();
                     break;
                 case "Options":
+                    FindObjectOfType<AudioManager>().Play("mi");
                     Debug.LogWarning("NO OPTIONS SETTINGS HERE");
                     break;
                 case "Controls":
+                    FindObjectOfType<AudioManager>().Play("fa");
                     showControls.SetActive(true);
                     break;
                 case "Quit":
+                    FindObjectOfType<AudioManager>().Play("sol");
                     Debug.LogWarning("Are You Sure You Wanna QUIT?");
                     Application.Quit();
                     break;

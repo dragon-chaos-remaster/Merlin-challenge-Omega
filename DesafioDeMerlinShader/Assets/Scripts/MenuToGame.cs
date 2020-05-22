@@ -23,6 +23,7 @@ public class MenuToGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            FindObjectOfType<AudioManager>().Play("re");
             Tran_SITION(1);
         }
     }
